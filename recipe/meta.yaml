@@ -1,4 +1,4 @@
-{% set version = "10.6.0" %}
+{% set version = "10.7.0" %}
 
 package:
   name: stripe
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/stripe/stripe-{{ version }}.tar.gz
-  sha256: 41ccb0ada5928d89530ed06d17a71bfbf5f4ea4f2324e30d8d636a2ab7180a74
+  sha256: 9edadbda8b0ab5945a8d6a3b58d4f0d14c8f4e7784f5bd7e73ab85fe360145ef
 
 build:
   number: 0
