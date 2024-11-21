@@ -1,11 +1,13 @@
 {% set version = "11.3.0" %}
 
+{% set python_min = python_min | default("3.9") %}
+
 package:
   name: stripe
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/stripe/stripe-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/stripe/stripe-{{ version }}.tar.gz
   sha256: 98e625d9ddbabcecf02666867169696e113d9eaba27979fb310a7a8dfd44097c
 
 build:
@@ -16,11 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
     - wheel
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - requests >=2.20
     - typing_extensions >=4.5.0
 
@@ -31,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/stripe/stripe-python
