@@ -33,8 +33,7 @@ tests:
   - python:
       pip_check: true
       python_version: ${{ python_min }}.*
-      imports:
-        - stripe
+      imports: stripe
 
 about:
   summary: Python bindings for the Stripe API
