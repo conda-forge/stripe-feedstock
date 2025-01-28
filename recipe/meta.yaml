@@ -1,4 +1,4 @@
-{% set version = "11.4.1" %}
+{% set version = "11.5.0" %}
 
 {% set python_min = python_min | default("3.9") %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/stripe/stripe-{{ version }}.tar.gz
-  sha256: 7ddd251b622d490fe57d78487855dc9f4d95b1bb113607e81fd377037a133d5a
+  sha256: bc3e0358ffc23d5ecfa8aafec1fa4f048ee8107c3237bcb00003e68c8c96fa02
 
 build:
   number: 0
