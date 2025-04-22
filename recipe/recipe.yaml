@@ -27,13 +27,14 @@ requirements:
   run:
     - python >=${{ python_min }}
     - requests >=2.20
-    - typing_extensions >=4.5.0
 
 tests:
   - python:
-      pip_check: true
-      python_version: ${{ python_min }}.*
       imports: stripe
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - 3.13.*
 
 about:
   summary: Python bindings for the Stripe API
