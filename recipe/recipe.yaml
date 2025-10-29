@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "13.0.1"
+  version: "13.1.0"
 
 package:
   name: stripe
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/stripe/stripe-${{ version }}.tar.gz
-  sha256: 5869739430ff73bd9cd81275abfb79fd4089e97e9fd98d306a015f5defd39a0d
+  sha256: 059effec8c2c6a3cf987aceccf47eda4c5e16b6097fd8fe70025079816afc3cc
 
 build:
   number: 0
