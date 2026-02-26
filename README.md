@@ -3,11 +3,13 @@ About stripe-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/stripe-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/stripe/stripe-python
+Home: https://pypi.org/project/stripe
 
 Package license: MIT
 
 Summary: Python bindings for the Stripe API
+
+Development: https://github.com/stripe/stripe-python
 
 Current build status
 ====================
