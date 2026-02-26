@@ -2,7 +2,8 @@
 schema_version: 1
 
 context:
-  version: "14.3.0"
+  version: "14.4.0"
+  python_check_max: "3.14"
 
 package:
   name: stripe
@@ -10,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/stripe/stripe-${{ version }}.tar.gz
-  sha256: 4c76137d741bd43e8bb433a596c198ca20f4cdf17a8fe04604faf37c74b01978
+  sha256: ddaa06f5e38a582bef7e93e06fc304ba8ae3b4c0c2aac43da02c84926f05fa0a
 
 build:
   number: 0
@@ -34,13 +35,14 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - ${{ python_check_max }}.*
 
 about:
   summary: Python bindings for the Stripe API
   license: MIT
   license_file: LICENSE
-  homepage: https://github.com/stripe/stripe-python
+  homepage: https://pypi.org/project/stripe
+  repository: https://github.com/stripe/stripe-python
 
 extra:
   recipe-maintainers:
