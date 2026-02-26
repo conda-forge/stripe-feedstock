@@ -3,6 +3,7 @@ schema_version: 1
 
 context:
   version: "14.4.0"
+  python_check_max: "3.14"
 
 package:
   name: stripe
@@ -34,13 +35,14 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - ${{ python_check_max }}.*
 
 about:
   summary: Python bindings for the Stripe API
   license: MIT
   license_file: LICENSE
-  homepage: https://github.com/stripe/stripe-python
+  homepage: https://pypi.org/project/stripe
+  repository: https://github.com/stripe/stripe-python
 
 extra:
   recipe-maintainers:
