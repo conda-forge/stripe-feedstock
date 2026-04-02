@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "15.0.0"
+  version: "15.0.1"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/stripe/stripe-${{ version }}.tar.gz
-  sha256: 0717cd9ba8e8193cef8b1c488ce27836754df496ab6fb75864096e0cdf15e52d
+  sha256: 3c04e8cc9ec8d9542f9dd998e2a4361dbe3d0b6150ca17d3f352546cf22c5565
 
 build:
   number: 0
