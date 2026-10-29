@@ -2,8 +2,8 @@
 schema_version: 1
 
 context:
-  version: "16.0.1"
-  python_check_max: "3.14"
+  version: "16.1.0"
+  python_check_max: "3.15"
 
 package:
   name: stripe
@@ -11,13 +11,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/stripe/stripe-${{ version }}.tar.gz
-  sha256: 44f20abd85c5cdac1d019c290b2fa055db2b6f4890f7f3b2daa493eb48c9a0d2
+  sha256: 21e72b6779b8cff337ca8d2b8d30138f2d68f6a8d739701076f06a418ad75b8c
 
 build:
   number: 0
   noarch: python
   script:
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check --check-build-dependencies
 
 requirements:
   host:
@@ -30,6 +30,11 @@ requirements:
     - typing_extensions >=4.7.0
 
 tests:
+  - package_contents:
+      strict: true
+      site_packages:
+        - stripe/**
+        - stripe-${{ version }}.dist-info/**
   - python:
       imports: stripe
       pip_check: true
